@@ -8,9 +8,8 @@ var server = http.createServer(function(req, res) {
     studerende.navn = "Cosby";
     studerende.humør = false;
     studerende.tid = date.myDateTime();
-    fs.readFile("dogpoop.png");
-    res.end(JSON.stringify(studerende) + fs);
-}).listen(999);
+    res.end(JSON.stringify(studerende));
+}).listen(8080);
 
 
 
