@@ -7,9 +7,11 @@ var server = http.createServer(function(req, res) {
     var studerende = {};
     studerende.navn = "Cosby";
     studerende.humør = false;
+    studerende.billede = "dogpoop.png";
     studerende.tid = date.myDateTime();
     res.end(JSON.stringify(studerende));
-}).listen(8080);
+}).listen(8081);
+
 
 
 
