@@ -1,13 +1,12 @@
-var http = require('http');
-var fs = require('fs');
+const express = require('express');
+const app = express();
+const port = 3000;
+const path = require('path');
+const router = require('./displayImage/router');
 
-var server = http.createServer(function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    fs.readFile('C:/Users/Mads/Desktop/Web development/Node/memes/dogpoop.png', (err, data) => {
-        studerende = {};
-        console.log(data);
-        studerende.file = data;
-        res.end(JSON.stringify(studerende));
-    })
-   
-}).listen(8082);
+app.use('/gif', router);
+app.use(express.static(path.join(__dirname, 'displayImage')));
+
+app.get('/', (req, res) => res.send('demofile1'));
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
