@@ -19,6 +19,7 @@
   "homepage": "https://github.com/madsmansour/Nodejs#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "node-dir": "^0.1.17",
     "path": "^0.12.7"
   }
 }
